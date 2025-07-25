@@ -6,8 +6,8 @@ export default function Header() {
   const dispatch = useDispatch();
 
   return (
-    <header className="h-16 shadow-gray-900  bg-blue-500 border-none shadow flex items-center justify-between px-6">
-      <h1 className="font-bold text-lg text-white">My App</h1>
+    <header className="h-16 shadow-gray-900  bg-blue-300 border-none shadow flex items-center justify-between px-6">
+      <h1 className="font-bold text-lg text-black/80">My App</h1>
 
       <div className="flex items-center gap-3">
         {isAuthenticated ? (
