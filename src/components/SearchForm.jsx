@@ -19,7 +19,7 @@ export default function SearchForm() {
     <form onSubmit={onSubmit} className="flex gap-2 justify-center mb-8">
       <input
         type="text"
-        className="input bg-gray-600 text-white border-none focus:outline focus:outline-2 focus:outline-blue-500 w-full max-w-md"
+        className="input bg-gray-400 hover:bg-gray-600 text-white border-none rounded-sm focus:outline focus:outline-2 focus:outline-blue-500 w-full max-w-md"
         placeholder="Masalan: cat, mountains, car..."
         value={query}
         onChange={(e) => dispatch(setQuery(e.target.value))}
