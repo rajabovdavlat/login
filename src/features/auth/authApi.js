@@ -1,15 +1,21 @@
-export const fakeLogin = async ({ email, password }) => {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  await new Promise((res) => setTimeout(res, 800));
-
+export async function fakeLogin({ email, password }) {
+  await sleep(700);
   if (email === "test@test.com" && password === "123456") {
-  
     return {
       user: { id: 1, email, name: "Test User" },
-      token: "fake_jwt_token_123",
+      token: "jwt_login_token",
     };
   }
+  throw new Error("Неверный логин или пароль");
+}
 
- 
-  throw new Error("Неверный email или пароль");
-};
+export async function fakeRegister({ username, email, password }) {
+  await sleep(900);
+  return {
+    user: { id: 2, email, name: username || email },
+    token: "jwt_register_token",
+  };
+}
+
